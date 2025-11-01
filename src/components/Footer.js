@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
           
         </div>
-          <hr className="footer-divider" />
+          
         <div className="footer-col">
           <div
             className="footer-col-header"
@@ -84,32 +84,55 @@ const Footer = () => {
             </div>
           
         </div>
-          <hr className="footer-divider" />
+          
         <div className="footer-col">
-          <div
-            className="footer-col-header"
-            
-          >
+          <div className="footer-col-header">
             <h4>FOLLOW US</h4>
             <span>{activeSection === "follow" ? "−" : "+"}</span>
           </div>
-          
-            <div className="footer-col-content">
-              <div className="social-icons">
-                <img
-                  src="https://res.cloudinary.com/da4a06plx/image/upload/v1761985236/Insta_byfhbf.png"
-                  alt="Instagram"
-                  
-
-                />
-                <img
-                  src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/a_akfwyp.png"
-                  alt="LinkedIn"
-                />
-              </div>
+          <div className="footer-col-content">
+            <div className="social-icons">
+              <img
+                src="https://res.cloudinary.com/da4a06plx/image/upload/v1761985236/Insta_byfhbf.png"
+                alt="Instagram"
+              />
+              <img
+                src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/a_akfwyp.png"
+                alt="LinkedIn"
+              />
             </div>
-          
+          </div>
+          <div className="footer-payments">
+        <h4>mettà muse ACCEPTS</h4>
+        <div className="payment-icons">
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136188_sl335p.png"
+            alt="Google Pay"
+          />
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136190_cbay5c.png"
+            alt="Mastercard"
+          />
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136192_qctyeq.png"
+            alt="PayPal"
+          />
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136193_hptfna.png"
+            alt="Amex"
+          />
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136194_hqbjey.png"
+            alt="Apple Pay"
+          />
+          <img
+            src="https://res.cloudinary.com/da4a06plx/image/upload/v1761984921/Group_136195_ukp5jt.png"
+            alt="Visa"
+          />
         </div>
+      </div>
+        </div>
+        
       </div>
 
       <div className="footer-links-mobile">
@@ -181,10 +204,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="footer-divider" />
+      <hr className="footer-divider large-device-hr" />
 
       {/* ---------- PAYMENT SECTION ---------- */}
-      <div className="footer-payments">
+      <div className="footer-payments-mobile">
         <h4>mettà muse ACCEPTS</h4>
         <div className="payment-icons">
           <img

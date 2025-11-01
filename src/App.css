@@ -451,6 +451,7 @@ text-align: center;
 }
 .footer-col {
   margin-bottom: 1rem;
+  width: 28%;
   
 }
 .footer-links-mobile{
@@ -462,6 +463,7 @@ text-align: center;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 99vw;
 }
 
 .footer-col-header h4 {
@@ -499,9 +501,10 @@ text-align: center;
   cursor: pointer;
 }
 
-.footer-payments {
+.footer-payments-mobile {
   margin-top: 1.5rem;
 }
+
 
 .footer-payments h4 {
   font-size: 0.9rem;
@@ -522,7 +525,9 @@ text-align: center;
   border-radius: 4px;
   object-fit: fill;
 }
-
+.large-device-hr{
+  display: none;
+}
 /* Copyright */
 .footer-bottom {
   text-align: center;
@@ -547,6 +552,9 @@ text-align: center;
     justify-content: space-between;
   }
   .footer-links-mobile{
+    display: none;
+  }
+  .footer-payments-mobile{
     display: none;
   }
 
@@ -598,6 +606,9 @@ text-align: center;
   }
   .footer-container{
     width: 105%;
+  }
+  .large-device-hr{
+    display: block;
   }
 }
 
@@ -739,6 +750,9 @@ text-align: center;
   }
   .footer-container{
     width: 100%;
+  }
+  .large-device-hr{
+    display: block;
   }
   
 }
