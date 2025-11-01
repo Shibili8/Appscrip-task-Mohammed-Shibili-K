@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  
+  const [count, setCount] = useState(0)
   const [filtered, setFiltered] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -21,6 +21,7 @@ const App = () => {
       .then((res) => {
         setProducts(res.data);
         setFiltered(res.data);
+        setCount(res.data.length)
         
       })
       .catch((err) => console.error("API error:", err));
@@ -28,7 +29,13 @@ const App = () => {
 
   return (
     <>
-      <Header products={products} setFiltered={setFiltered} setShowFilters={setShowFilters} showFilters={showFilters}/>
+      <Header products={products} 
+        setFiltered={setFiltered} 
+        setShowFilters={setShowFilters} 
+        showFilters={showFilters}
+        count={count}
+        setCount={setCount}
+      />
       {console.log(products)}
       <main>
         <div className="main-container">
@@ -39,6 +46,8 @@ const App = () => {
                 products={products}
                 setFiltered={setFiltered}
                 toggleFilters={() => setShowFilters()}
+                count={count}
+                setCount={setCount}
                 
               />
             )}

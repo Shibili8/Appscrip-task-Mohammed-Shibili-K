@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
+const Header = ({ products, setFiltered, setShowFilters, showFilters, count, setCount }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -13,6 +13,7 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
       p.title.toLowerCase().includes(query)
     );
     setFiltered(filtered);
+    setCount(filtered.length)
   };
 
   const handleSort = (e) => {
@@ -111,7 +112,7 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
 
       <div className="header-bottom-bar">
         <div className="header-count-filter-container">
-        <span className="product-count">{products.length} items</span>
+        <span className="product-count">{count} items</span>
 
         <button className="show-filters-btn" onClick={toggleFilters}>
           {showFilters ? "Hide Filters" : "Show Filters"}

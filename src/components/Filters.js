@@ -1,6 +1,6 @@
 import React from "react";
 
-const Filters = ({ products, setFiltered, toggleFilters }) => {
+const Filters = ({ products, setFiltered, toggleFilters, count, setCount }) => {
   const handleIdealFilter = (type) => {
     let filteredData = [];
 
@@ -14,17 +14,20 @@ const Filters = ({ products, setFiltered, toggleFilters }) => {
     }
 
     setFiltered(filteredData);
+    setCount(filteredData.length)
   };
 
   
   const handleCategoryFilter = (category) => {
     if (category === "all") {
       setFiltered(products);
+      setCount(products.length)
     } else {
       const filteredData = products.filter((p) =>
         p.category.toLowerCase().includes(category.toLowerCase())
       );
       setFiltered(filteredData);
+      setCount(filteredData.length)
     }
   };
 
