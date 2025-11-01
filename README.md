@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 🛍️ Appscrip Product Listing Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based e-commerce product listing page** with sorting, filtering, and responsive design — built for the **Appscrip Frontend Assignment**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 🧭 Header
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Company logo and navigation links
+* Responsive icons (search, wishlist, cart, profile)
+* Search functionality with toggle
+* Sorting dropdown (“Low to High”, “High to Low”, “Recommended”)
+* Displays total product count and “Show/Hide Filters” toggle in one row
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🧩 Filters
 
-### `npm test`
+* Two filter sections:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * **Ideal For:** Men, Women
+  * **Category:** All, Clothing, Jewellery, Electronics
+* Dynamically filters the product grid
+* “Show/Hide Filters” button toggles the sidebar visibility
 
-### `npm run build`
+### 💰 Product Grid
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Fetches product data from [Fake Store API](https://fakestoreapi.com/products)
+* Displays product image, name, and price
+* Fully responsive grid layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📩 Footer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Newsletter subscription box
+* Contact details and currency info
+* Collapsible sections for mobile view:
 
-### `npm run eject`
+  * **mettà muse**
+  * **Quick Links**
+  * **Follow Us**
+* Payment icons and copyright
+* Modern responsive black theme (Figma-accurate design)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+appscrip-task/
+│
+├── public/
+│   ├── index.html
+│   └── logo192.png
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Filters.js
+│   │   ├── ProductGrid.js
+│   │   ├── ProductCard.js
+│   │   └── Footer.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🌍 API Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All product data is fetched from the public **Fake Store API**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+https://fakestoreapi.com/products
+```
