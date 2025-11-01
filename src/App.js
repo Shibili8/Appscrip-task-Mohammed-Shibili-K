@@ -32,7 +32,7 @@ const App = () => {
       {console.log(products)}
       <main>
         <div className="main-container">
-          {/* Filters Sidebar */}
+          
           <div className="filter-section">
             {showFilters && (
               <Filters
@@ -43,8 +43,6 @@ const App = () => {
               />
             )}
           </div>
-            
-          {/* Product Area */}
           <div className="product-section">
             <ProductGrid products={filtered} />
           </div>

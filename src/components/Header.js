@@ -7,7 +7,6 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [showHamberger, setShowHamberger] = useState(false)
 
-  // 🔍 Search functionality
   const handleSearch = () => {
     const query = searchQuery.toLowerCase();
     const filtered = products.filter((p) =>
@@ -16,7 +15,6 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
     setFiltered(filtered);
   };
 
-  // ↕️ Sorting functionality
   const handleSort = (e) => {
     const order = e.target.value;
     setSortOrder(order);
@@ -86,7 +84,6 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
         </div>
       </div>
 
-      {/* Navigation Links */}
       <div className="header-link-items-container">
         <h1 className="header-link-items active-link">SHOP</h1>
         <h1 className="header-link-items">SKILL</h1>
@@ -94,14 +91,12 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
         <h1 className="header-link-items">ABOUT</h1>
       </div>
 
-      {/* Heading & Description */}
       <h1 className="header-heading">DISCOVER OUR PRODUCTS</h1>
       <p className="header-description">
         Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus
         scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.
       </p>
 
-      {/* Search Input (toggleable) */}
       {showSearch && (
         <div className="search-section">
           <input
@@ -114,7 +109,6 @@ const Header = ({ products, setFiltered, setShowFilters, showFilters }) => {
         </div>
       )}
 
-      {/* 🔽 Final Row: Product Count, Show Filters, Sort */}
       <div className="header-bottom-bar">
         <div className="header-count-filter-container">
         <span className="product-count">{products.length} items</span>

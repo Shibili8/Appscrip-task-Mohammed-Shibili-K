@@ -9,7 +9,6 @@ const Footer = () => {
 
   return (
     <footer className="footer-container">
-      {/* ---------- TOP SECTION ---------- */}
       <div className="footer-top">
         <div className="footer-subscribe">
           <h3>BE THE FIRST TO KNOW</h3>
@@ -43,7 +42,6 @@ const Footer = () => {
 
       <hr className="footer-divider" />
 
-      {/* ---------- COLLAPSIBLE LINKS ---------- */}
       <div className="footer-links">
         <div className="footer-col">
           <div
@@ -206,7 +204,6 @@ const Footer = () => {
 
       <hr className="footer-divider large-device-hr" />
 
-      {/* ---------- PAYMENT SECTION ---------- */}
       <div className="footer-payments-mobile">
         <h4>mettà muse ACCEPTS</h4>
         <div className="payment-icons">
@@ -237,7 +234,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* ---------- BOTTOM COPYRIGHT ---------- */}
       <div className="footer-bottom">
         <p>Copyright © 2023 mettamuse. All rights reserved.</p>
       </div>

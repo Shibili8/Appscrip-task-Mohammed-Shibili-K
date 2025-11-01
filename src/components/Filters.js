@@ -1,7 +1,6 @@
 import React from "react";
 
 const Filters = ({ products, setFiltered, toggleFilters }) => {
-  // 🧍 Filter by "Ideal For"
   const handleIdealFilter = (type) => {
     let filteredData = [];
 
@@ -9,9 +8,7 @@ const Filters = ({ products, setFiltered, toggleFilters }) => {
       filteredData = products.filter((p) => p.category === "men's clothing");
     } else if (type === "Women") {
       filteredData = products.filter((p) => p.category === "women's clothing");
-    } else if (type === "Babies") {
-      // No "babies" data in fakestoreapi — just show empty or all for now
-      filteredData = [];
+    
     } else {
       filteredData = products;
     }
@@ -19,7 +16,7 @@ const Filters = ({ products, setFiltered, toggleFilters }) => {
     setFiltered(filteredData);
   };
 
-  // 🛍 Filter by Category
+  
   const handleCategoryFilter = (category) => {
     if (category === "all") {
       setFiltered(products);
@@ -40,7 +37,7 @@ const Filters = ({ products, setFiltered, toggleFilters }) => {
         </button>
       </div>
 
-      {/* Ideal For */}
+      
       <div className="filter-group">
         <h3>Ideal For</h3>
         <button onClick={() => handleIdealFilter("Men")}>Men</button>
@@ -48,7 +45,7 @@ const Filters = ({ products, setFiltered, toggleFilters }) => {
         
       </div>
 
-      {/* Category */}
+      
       <div className="filter-group">
         <h3>Category</h3>
         <button onClick={() => handleCategoryFilter("all")}>All</button>
